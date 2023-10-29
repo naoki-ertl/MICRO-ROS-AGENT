@@ -1,0 +1,7 @@
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/install/strip.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/install/local.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/install.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/list_install_components.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/microxrcedds_client.dir

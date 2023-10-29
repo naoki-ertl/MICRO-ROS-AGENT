@@ -1,0 +1,13 @@
+# Target labels
+ uclient
+# Source files and their labels
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/uclient
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/uclient.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/CMakeFiles/uclient-complete.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-install.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-mkdir.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-download.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-update.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-patch.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-configure.rule
+/home/ubuntu/Micro-XRCE-DDS-Agent/build/microxrcedds_client/src/microxrcedds_client-build/uclient-prefix/src/uclient-stamp/uclient-build.rule
