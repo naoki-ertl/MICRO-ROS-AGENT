@@ -97,13 +97,14 @@ void Processor<EndPoint>::process_input_packet(
 
             Session& session = client->session();
             dds::xrce::StreamId stream_id = input_packet.message->get_header().stream_id();
+
+            //std::cout << "Stream ID: " << stream_id << std::endl; // Output the stream ID
             dds::xrce::SequenceNr sequence_nr = input_packet.message->get_header().sequence_nr();
             session.push_input_message(std::move(input_packet.message), stream_id, sequence_nr);
             while (session.pop_input_message(stream_id, input_packet.message))
             {
                 process_input_message(*client, input_packet);
             }
-
             if (is_reliable_stream(stream_id))
             {
                 dds::xrce::MessageHeader acknack_header;
@@ -320,12 +321,10 @@ template<typename EndPoint>
 bool Processor<EndPoint>::process_create_submessage(
         ProxyClient& client,
         InputPacket<EndPoint>& input_packet)
-{
+{   
     bool rv = true;
     dds::xrce::CreationMode creation_mode;
-    dds::xrce::StreamId stream_kind = is_reliable_stream(input_packet.message->get_header().stream_id()) ?
-            dds::xrce::STREAMID_BUILTIN_RELIABLE : dds::xrce::STREAMID_BUILTIN_BEST_EFFORTS;
-
+    
     creation_mode.reuse(0 < (input_packet.message->get_subheader().flags() & dds::xrce::FLAG_REUSE));
     creation_mode.replace(0 < (input_packet.message->get_subheader().flags() & dds::xrce::FLAG_REPLACE));
 
@@ -395,7 +394,7 @@ bool Processor<EndPoint>::process_delete_submessage(
         {
             dds::xrce::StreamId stream_kind = is_reliable_stream(input_packet.message->get_header().stream_id()) ?
                     dds::xrce::STREAMID_BUILTIN_RELIABLE : dds::xrce::STREAMID_BUILTIN_BEST_EFFORTS;
-
+            
             status_payload.result(client.delete_object(delete_payload.object_id()));
 
             client.session().push_output_submessage(
@@ -662,7 +661,6 @@ bool Processor<EndPoint>::process_heartbeat_submessage(
         client.session().update_from_heartbeat(stream_id,
                                                heartbeat_payload.first_unacked_seq_nr(),
                                                heartbeat_payload.last_unacked_seq_nr());
-
         dds::xrce::ACKNACK_Payload acknack_payload;
         client.session().fill_acknack(stream_id, acknack_payload);
         acknack_payload.stream_id(stream_id);
